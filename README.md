@@ -3,7 +3,7 @@ Random inspiration quotes for a better day
 
 ## freeCodeCamp Front End Development Libraries Certification Project 1
 
-This is a standalone application inspired by the first certificaton project for the Front End Development Libraries course at (freeCodeCamp.org)[https://www.freecodecamp.org/learn]. When the application loads, a random quote is displayed to the user. The user then has the ability to tweet the quote, share it on Facebook, or generate a new quote.
+This is a standalone application inspired by the first certificaton project for the Front End Development Libraries course at [freeCodeCamp.org](https://www.freecodecamp.org/learn). When the application loads, a random quote is displayed to the user. The user then has the ability to tweet the quote, share it on Facebook, or generate a new quote.
 
 #### Warning to anyone currently working toward this certification: These projects are meant to serve as an estimate of your own skills. This is a full implementation of this project. Continue at your own discretion.
 
