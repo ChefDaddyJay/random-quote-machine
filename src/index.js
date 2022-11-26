@@ -1,6 +1,7 @@
 import ReactDom from "react-dom";
 import React from "react";
-import QuoteMachine from "./lib/quote-machine";
+import QuoteMachine from "./quote-machine";
+import "./style.css";
 
 const App = () => {
   return <QuoteMachine />;
