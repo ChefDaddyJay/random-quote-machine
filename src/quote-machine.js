@@ -1,16 +1,20 @@
 import React from "react";
-import ReactDom from "react-dom";
 import "./style.css";
-import { Quote, NewQuoteButton } from "./quotes";
+import { QUOTES, Quote, NewQuoteButton } from "./quotes";
 
 export default class QuoteMachine extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = { currentQuote: Math.floor(Math.random() * QUOTES.length) };
+  }
+  handleClick(event) {
+    this.setState({ currentQuote: Math.floor(Math.random() * QUOTES.length) });
   }
   render() {
     return (
       <div id="quote-box">
-        <Quote />
+        <Quote quote={this.state.currentQuote} />
         <NewQuoteButton clickHandler={this.handleClick.bind(this)} />
         <ShareLinks />
       </div>
