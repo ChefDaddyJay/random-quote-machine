@@ -22,6 +22,11 @@ html {
   width: 100vw;
   height: 100vh;
   background: var(--secondary-background);
+
+  /* These three lines make the App pass all fCC test, but I feel the design is better without them. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #text {
@@ -32,66 +37,82 @@ html {
   background: var(--primary-background);
   box-shadow: 2px 2px 3px var(--dark-shadow), -2px -2px 3px var(--light-shadow);
   color: var(--primary-text);
+  height: 90vh;
+  border-radius: 0 0 30vw 0;
 }
 
-#new_quote {
+#text h1 {
+  margin: 2vw;
+  position: relative;
+  top: -10%;
+  font-size: 150%;
+}
+
+#text #author {
+  position: absolute;
+  left: 50%;
+  top: 65vh;
+}
+
+#new-quote {
   border: none;
   border-radius: 50%;
   background: linear-gradient(145deg, #cb385b, #ab2f4d);
   box-shadow: 5px 5px 19px var(--dark-shadow),
     -5px -5px 19px var(--light-shadow);
-  font-size: 2rem;
   font-weight: bold;
   transition: box-shadow 0.2s;
   color: var(--primary-background);
   text-shadow: 2px 2px 3px var(--dark-shadow), -2px -2px 3px var(--light-shadow);
 }
 
-#new_quote:hover {
+#new-quote:hover {
   box-shadow: 7px 7px 19px var(--light-shadow),
     -7px -7px 19px var(--dark-shadow);
 }
 
-#new_quote:active {
+#new-quote:active {
   background: linear-gradient(145deg, #cb385b, #ab2f4d);
   box-shadow: 5px 5px 19px #902841, -5px -5px 19px #ec4069;
   text-shadow: 2px 2px 3px var(--dark-shadow), -2px -2px 3px var(--light-shadow);
 }
 
+#share_links {
+  display: flex;
+  align-items: center;
+  height: 10vh;
+}
+
+#share_links img {
+  margin: 1vw;
+  width: 5rem;
+  height: 1rem;
+}
+
 @media (orientation: landscape) {
   #text {
     width: calc(100vw - 20vh);
-    height: 90vh;
-    border-radius: 0 0 30vw 0;
   }
 
-  #text h1 {
-    margin: 2vw;
-    position: relative;
-    top: -10%;
-    font-size: 2.5rem;
-  }
-
-  #text #author {
+  #new-quote {
+    width: 20vh;
+    height: 20vh;
     position: absolute;
-    left: 65%;
-    top: 65vh;
+    left: calc(100vw - 30vh);
+    top: 70vh;
+  }
+}
+
+@media (orientation: portrait) {
+  #text {
+    width: calc(100vw - 15vh);
   }
 
-  #new_quote {
+  #new-quote {
+    width: minmax(min-content, 15vh);
+    height: minmax(min-content, 15vh);
     position: absolute;
-    left: 84vw;
-    top: calc(100vh - 17vw);
-    width: 15vw;
-    height: 15vw;
-  }
-
-  #share_links {
-    display: flex;
-    height: 10vh;
-  }
-
-  #share_links img {
-    margin: 1.5vw;
+    left: 80vw;
+    top: calc(100vh - 20vw);
   }
 }

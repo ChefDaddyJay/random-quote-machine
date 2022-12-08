@@ -64,7 +64,7 @@ export class NewQuoteButton extends React.Component {
   }
   render() {
     return (
-      <button id="new_quote" onClick={this.props.clickHandler}>
+      <button id="new-quote" onClick={this.props.clickHandler}>
         New Quote
       </button>
     );

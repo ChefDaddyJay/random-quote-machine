@@ -29,8 +29,12 @@ class ShareLinks extends React.Component {
   render() {
     return (
       <div id="share_links">
-        <img src="https://img.shields.io/badge/twitter-%1DA1F2.svg?style=social&logo=twitter&logoColor=#1DA1F2" />
-        <img src="https://img.shields.io/badge/facebook-%1877F2.svg?style=social&logo=facebook&logoColor=#1877F2" />
+        <a href="twitter.com/intent/tweet" id="tweet-quote">
+          <img src="https://img.shields.io/badge/twitter-%1DA1F2.svg?style=social&logo=twitter&logoColor=#1DA1F2" />
+        </a>
+        <a href="#" id="fb-quote">
+          <img src="https://img.shields.io/badge/facebook-%1877F2.svg?style=social&logo=facebook&logoColor=#1877F2" />
+        </a>
       </div>
     );
   }
